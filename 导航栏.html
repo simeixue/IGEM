@@ -1,0 +1,867 @@
+<html lang="en" dir="ltr" class="client-js">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Team:NEFU-China-2021.igem.org</title>
+  <meta name="generator" content="MediaWiki 1.24.1">
+  </ul>
+  <!-- Content div contains HQ_page for HQ styles, Logo and title div, and USER CONTENT -->
+  <div id="content" class="mw-body" role="main">
+    <div id="HQ_page">
+      <div id="bodyContent">
+        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+          <p>
+
+            <style type="text/css">
+              #sideMenu,
+              #top_title,
+              .patrollink,
+              #firstHeading,
+              #home_logo,
+              #sideMenu {
+                display: none;
+              }
+
+              #content {
+                padding: 0px;
+                width: 100%;
+                margin-top: -7px;
+                margin-left: 0px;
+                border: none;
+              }
+
+              body,
+              html {
+                background-color: white;
+                width: 100%;
+                height: 100%;
+              }
+
+              #bodyContent h1,
+              #bodyContent h2,
+              #bodyContent h3,
+              #bodyContent h4,
+              #bodyContent h5 {
+                margin-bottom: 0px;
+              }
+
+              #bodyContent a[href ^="https://"],
+              .link-https {
+                padding-right: 0px;
+              }
+            </style>
+            <!--删除原本的页面样式，放上wiki时候记得撤销注释-->
+            <style type="text/css">
+              body {
+                margin: 0px auto 20px auto;
+                padding: 0px;
+                /*width: 100%;*/
+              }
+
+              /*整个页面*/
+              /*wiki上body的设置有问题，会让左右出现滚动条，于是考虑设置每一个元素的宽度不超过页面90%*/
+              #navigation_bar_bgwhite {
+                top: 10px;
+                margin-top: 0px;
+                width: 100%;
+                height: 70px;
+                background-color: white;
+                position: fixed;
+                padding: 0px;
+                z-index: 10;
+              }
+
+              #navigation_bar {
+                left: 50%;
+                margin-left: -600px;
+                /*先偏移至左边对齐中间再向左偏移一半宽度，即可将固定定位的居中*/
+                width: 1280px;
+                height: 70px;
+                padding: 0px;
+                background-color: white;
+                position: fixed;
+              }
+
+              /*上方导航栏*/
+              #navigation_bar .teamlogo {
+                float: left;
+                margin-top: 10px;
+              }
+
+              /*导航栏团队logo*/
+              #navigation_bar .teamlogo_img {
+                margin-top: 0px;
+                height: 55px;
+              }
+
+              .clear_navigation_bar_float {
+                clear: both;
+              }
+
+              /*清除导航栏浮动*/
+              #navigation_bar .catalog {
+                border-collapse: collapse;
+                padding-top: 5px;
+              }
+
+
+              /*导航栏目录*/
+              /*---------------------------导航栏主标题home相关---------------------------*/
+              .catalog_list_home a {
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                height: 60px;
+                width: 13.5%;
+                float: left;
+                text-align: center;
+                line-height: 60px;
+                font-size: 20px;
+                position: relative;
+                color: #212832;
+                display: block;
+                text-decoration: none;
+                transition: transform 0.5s;
+              }
+
+              .catalog_list_home a:hover {
+                color: #ee786b;
+                transform: scale(1.3, 1.3);
+              }
+
+
+
+
+
+
+
+
+              /*主标题移动上产生变色和阴影效果*/
+              /*---------------------------导航栏主标题team相关--------------------------*/
+              .catalog_list_team a {
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                height: 60px;
+                width: 13.5%;
+                /*display: block;*/
+                /*规定行高之后这个似乎没什么用？*/
+                float: left;
+                text-align: center;
+                line-height: 60px;
+                font-size: 20px;
+                position: relative;
+                /*为了做展开动画加的???but为什么要加*/
+                color: #212832;
+                display: block;
+                transition: transform 0.5s;
+              }
+
+              .catalog_list_team a:hover {
+                color: #ee786b;
+                transform: scale(1.3, 1.3);
+              }
+
+
+              /*删除导航栏主标题超链接下划线*/
+              .catalog_list_team a:link,
+              .catalog_list_team a:visited {
+                color: black;
+              }
+
+              /*规定导航栏主标题超链接格式*/
+              .catalog_list_team:hover {
+                background-color: #ed7569;
+                box-shadow: 0px 5px 5px #888888;
+              }
+
+              /*主标题移动上产生变色和阴影效果*/
+              .catalog_list_team:hover .catalog_list_teamdowndrop {
+                display: block;
+              }
+
+              /*导航栏主标题移动上后显示次标题下拉菜单*/
+              .catalog_list_teamdowndrop {
+                /*display: none;*/
+                position: absolute;
+                width: 100%;
+                margin-top: 4px;
+                background-color: #ed7569;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+                box-shadow: 0px 5px 5px #888888;
+                /*border-style: solid;*/
+                /*加了这个border之后border不是向外的而是占据本身的空间，所以内容会往右偏。。。。*/
+              }
+
+              /*次标题盒子属性*/
+              .catalog .catalog_list_team:hover .catalog_list_teamdowndrop .teamdowndrop_content {
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                margin-bottom: 2px;
+                font-size: 18px;
+                border-top-style: solid;
+                border-top-color: white;
+              }
+
+              /*主标题team移上后显示，次标题中间项属性*/
+              .teamdowndrop_content:hover {
+                background-color: #ed7569;
+              }
+
+              /*team次标题中间项移上后颜色变化*/
+              .catalog .catalog_list_team:hover .catalog_list_teamdowndrop .teamdowndrop_top {
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                margin-bottom: 2px;
+                font-size: 18px;
+              }
+
+              /*主标题标题team移上后显示，次标题第一项属性*/
+              .teamdowndrop_top:hover {
+                background-color: #ed7569;
+              }
+
+              /*team次标题第一项移上后颜色变化*/
+              .catalog .catalog_list_team:hover .catalog_list_teamdowndrop .teamdowndrop_bottom {
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                margin-bottom: 2px;
+                font-size: 18px;
+                border-top-style: solid;
+                border-top-color: white;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+              }
+
+              /*主标题team移上后显示，次标题最后一栏，留给圆角边框用*/
+              .teamdowndrop_bottom:hover {
+                background-color: #ed7569;
+              }
+
+              .catalog_list_team:after {
+                content: "";
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-left: 1px #000000 solid;
+                border-bottom: 1px #000000 solid;
+                position: absolute;
+                top: 24px;
+                right: 40px;
+                transform: rotate(-45deg);
+                /*transition: transfrom .3s ease-in,top .3s  ease-out;*/
+              }
+
+              /*在主标题后添加提示下拉菜单的小三角*/
+              .catalog_list_team:hover:after {
+                transform: rotate(-225deg);
+                top: 26px;
+                transition: all 500ms ease-in;
+                -moz-transition: all 500ms ease-in;
+                -o-transition: all 500ms ease-in;
+                -webkit-transition: all 500ms ease-in;
+              }
+
+              /*主标题移上后小三角变换方向*/
+              .catalog_list_team .catalog_list_teamdowndrop .teamdowndrop_top,
+              .catalog_list_team .catalog_list_teamdowndrop .teamdowndrop_content,
+              .catalog_list_team .catalog_list_teamdowndrop .teamdowndrop_bottom {
+                overflow: hidden;
+                height: 0;
+                -webkit-transition: all 500ms ease-in;
+                -moz-transition: all 500ms ease-in;
+                -o-transition: all 500ms ease-in;
+                transition: all 500ms ease-in;
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              /*次标题列表展开的动画效果*/
+              /*---------------------------导航栏主标题project相关--------------------------*/
+              .catalog_list_project {
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                height: 60px;
+                width: 13.5%;
+                float: left;
+                text-align: center;
+                line-height: 60px;
+                font-size: 20px;
+                position: relative;
+                /*为了做展开动画加的???but为什么要加*/
+              }
+
+              /*导航栏目录主标题*/
+              .catalog_list_project a {
+                text-decoration: none;
+                display: block;
+              }
+
+              /*删除导航栏主标题超链接下划线*/
+              .catalog_list_project a:link,
+              .catalog_list_project a:visited {
+                color: black;
+              }
+
+              /*规定导航栏主标题超链接格式*/
+              .catalog_list_project:hover {
+                background-color: #ed7569;
+                box-shadow: 0px 5px 5px #888888;
+              }
+
+              /*主标题移动上产生变色和阴影效果*/
+              .catalog_list_project:hover .catalog_list_projectdowndrop {
+                display: block;
+              }
+
+              /*导航栏主标题移动上后显示次标题下拉菜单*/
+              .catalog_list_projectdowndrop {
+                /*display: none;*/
+                position: absolute;
+                width: 100%;
+                margin-top: 4px;
+                background-color: #ed7569;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+                box-shadow: 0px 5px 5px #888888;
+                /*border-style: solid;*/
+                /*加了这个border之后border不是向外的而是占据本身的空间，所以内容会往右偏。。。。*/
+              }
+
+              /*次标题盒子属性*/
+              .catalog .catalog_list_project:hover .catalog_list_projectdowndrop .projectdowndrop_content {
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                margin-bottom: 2px;
+                font-size: 18px;
+                border-top-style: solid;
+                border-top-color: white;
+              }
+
+              /*主标题team移上后显示，次标题中间项属性*/
+              .projectdowndrop_content:hover {
+                background-color: #ed7569;
+              }
+
+              /*team次标题中间项移上后颜色变化*/
+              .catalog .catalog_list_project:hover .catalog_list_projectdowndrop .projectdowndrop_top {
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                margin-bottom: 2px;
+                font-size: 18px;
+              }
+
+              /*主标题标题team移上后显示，次标题第一项属性*/
+              .projectdowndrop_top:hover {
+                background-color: #c0d6bb;
+              }
+
+              /*team次标题第一项移上后颜色变化*/
+              .catalog .catalog_list_project:hover .catalog_list_projectdowndrop .projectdowndrop_bottom {
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                margin-bottom: 2px;
+                font-size: 18px;
+                border-top-style: solid;
+                border-top-color: white;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+              }
+
+              /*主标题team移上后显示，次标题最后一栏，留给圆角边框用*/
+              .projectdowndrop_bottom:hover {
+                background-color: #c0d6bb;
+              }
+
+              .catalog_list_project:after {
+                content: "";
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-left: 1px #000000 solid;
+                border-bottom: 1px #000000 solid;
+                position: absolute;
+                top: 24px;
+                right: 44px;
+                transform: rotate(-45deg);
+                /*transition: transfrom .3s ease-in,top .3s  ease-out;*/
+              }
+
+              /*在主标题后添加提示下拉菜单的小三角*/
+              .catalog_list_project:hover:after {
+                transform: rotate(-225deg);
+                top: 26px;
+                transition: all 500ms ease-in;
+                -moz-transition: all 500ms ease-in;
+                -o-transition: all 500ms ease-in;
+                -webkit-transition: all 500ms ease-in;
+              }
+
+              /*主标题移上后小三角变换方向*/
+              .catalog_list_project .catalog_list_projectdowndrop .projectdowndrop_top,
+              .catalog_list_project .catalog_list_projectdowndrop .projectdowndrop_content,
+              .catalog_list_project .catalog_list_projectdowndrop .projectdowndrop_bottom {
+                overflow: hidden;
+                height: 0;
+                -webkit-transition: all 150ms ease-in;
+                -moz-transition: all 150ms ease-in;
+                -o-transition: all 150ms ease-in;
+                transition: all 150ms ease-in;
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              /*次标题列表展开的动画效果*/
+              /*---------------------------导航栏主标题outlook相关--------------------------*/
+              .catalog_list_outlook a {
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                height: 60px;
+                width: 13.5%;
+                float: left;
+                text-align: center;
+                line-height: 60px;
+                font-size: 20px;
+                position: relative;
+                color: #212832;
+                display: block;
+                transition: transform 0.5s;
+                text-decoration: none;
+              }
+
+              .catalog_list_outlook a:hover {
+                color: #ee786b;
+                transform: scale(1.3, 1.3);
+              }
+
+              /*删除导航栏主标题超链接下划线*/
+              .catalog_list_outlook a:link,
+              .catalog_list_outlook a:visited {
+                color: black;
+              }
+
+              /*规定导航栏主标题超链接格式*/
+              .catalog_list_outlook:hover {
+                background-color: #ed7569;
+                box-shadow: 0px 5px 5px #888888;
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+
+              /*主标题移动上产生变色和阴影效果*/
+              /*---------------------------导航栏主标题safety相关---------------------------*/
+              .catalog_list_safety {
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                height: 60px;
+                width: 9%;
+                float: left;
+                text-align: center;
+                line-height: 60px;
+                font-size: 20px;
+                position: relative;
+              }
+
+              /*导航栏目录主标题home*/
+              .catalog_list_safety a {
+                text-decoration: none;
+                display: block;
+              }
+
+              /*删除导航栏主标题超链接下划线*/
+              .catalog_list_safety a:link,
+              .catalog_list_safety a:visited {
+                color: black;
+              }
+
+              /*规定导航栏主标题超链接格式*/
+              .catalog_list_safety:hover {
+                background-color: #edc05d;
+                box-shadow: 0px 5px 5px #888888;
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              /*主标题移动上产生变色和阴影效果*/
+              /*---------------------------导航栏主标题humanpractice相关---------------------------*/
+              .catalog_list_humanpractice {
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                height: 60px;
+                width: 13.5%;
+                float: left;
+                text-align: center;
+                line-height: 60px;
+                font-size: 20px;
+                position: relative;
+              }
+
+              /*导航栏目录主标题home*/
+              .catalog_list_humanpractice a {
+                text-decoration: none;
+                display: block;
+              }
+
+              /*删除导航栏主标题超链接下划线*/
+              .catalog_list_humanpractice a:link,
+              .catalog_list_humanpractice a:visited {
+                color: black;
+              }
+
+              /*规定导航栏主标题超链接格式*/
+              .catalog_list_humanpractice:hover {
+                background-color: #be6953;
+                box-shadow: 0px 5px 5px #888888;
+              }
+
+              /*主标题移动上产生变色和阴影效果*/
+              .catalog_list_humanpractice:hover .catalog_list_hpdowndrop {
+                display: block;
+              }
+
+              /*导航栏主标题移动上后显示次标题下拉菜单*/
+              .catalog_list_hpdowndrop {
+                /*display: none;*/
+                position: absolute;
+                width: 100%;
+                margin-top: 4px;
+                background-color: #c0d6bb;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+                box-shadow: 0px 5px 5px #888888;
+                /*border-style: solid;*/
+                /*加了这个border之后border不是向外的而是占据本身的空间，所以内容会往右偏。。。。*/
+              }
+
+              /*次标题盒子属性*/
+              .catalog .catalog_list_humanpractice:hover .catalog_list_hpdowndrop .hpdowndrop_content {
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                margin-bottom: 2px;
+                font-size: 18px;
+                border-top-style: solid;
+                border-top-color: white;
+              }
+
+              /*主标题team移上后显示，次标题中间项属性*/
+              .hpdowndrop_content:hover {
+                background-color: #c0d6bb;
+              }
+
+              /*主标题team移上后显示，次标题中间项属性*/
+              .projectdowndrop_content:hover {
+                background-color: #ed7569;
+              }
+
+              /*team次标题中间项移上后颜色变化*/
+              .catalog .catalog_list_humanpractice:hover .catalog_list_hpdowndrop .hpdowndrop_top {
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                margin-bottom: 2px;
+                font-size: 18px;
+              }
+
+              /*主标题标题team移上后显示，次标题第一项属性*/
+              .hpdowndrop_top:hover {
+                background-color: #c0d6bb;
+              }
+
+              /*team次标题第一项移上后颜色变化*/
+              .catalog .catalog_list_humanpractice:hover .catalog_list_hpdowndrop .hpdowndrop_bottom {
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                margin-bottom: 2px;
+                font-size: 18px;
+                border-top-style: solid;
+                border-top-color: white;
+                border-bottom-left-radius: 12px;
+                border-bottom-right-radius: 12px;
+              }
+
+              /*主标题team移上后显示，次标题最后一栏，留给圆角边框用*/
+              .hpdowndrop_bottom:hover {
+                background-color: #7a8faf;
+              }
+
+              .catalog_list_humanpractice:after {
+                content: "";
+                display: block;
+                width: 8px;
+                height: 8px;
+                border-left: 1px #000000 solid;
+                border-bottom: 1px #000000 solid;
+                position: absolute;
+                top: 24px;
+                right: 43px;
+                transform: rotate(-45deg);
+                /*transition: transfrom .3s ease-in,top .3s  ease-out;*/
+              }
+
+              /*在主标题后添加提示下拉菜单的小三角*/
+              .catalog_list_humanpractice:hover:after {
+                transform: rotate(-225deg);
+                top: 26px;
+                transition: all 200ms ease-in;
+                -moz-transition: all 200ms ease-in;
+                -o-transition: all 200ms ease-in;
+                -webkit-transition: all 200ms ease-in;
+              }
+
+              /*主标题移上后小三角变换方向*/
+              .catalog_list_humanpractice .catalog_list_hpdowndrop .hpdowndrop_top,
+              .catalog_list_humanpractice .catalog_list_hpdowndrop .hpdowndrop_content,
+              .catalog_list_humanpractice .catalog_list_hpdowndrop .hpdowndrop_bottom {
+                overflow: hidden;
+                height: 0;
+                -webkit-transition: all 150ms ease-in;
+                -moz-transition: all 150ms ease-in;
+                -o-transition: all 150ms ease-in;
+                transition: all 150ms ease-in;
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              /*次标题列表展开的动画效果*/
+              /*---------------------------导航栏主标题achievements相关--------------------------*/
+              .catalog_list_achievements {
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                height: 60px;
+                width: 13.5%;
+                float: left;
+                text-align: center;
+                line-height: 60px;
+                font-size: 20px;
+                position: relative;
+                /*为了做展开动画加的???but为什么要加*/
+              }
+
+              /*导航栏目录主标题*/
+              .catalog_list_achievements a {
+                text-decoration: none;
+                display: block;
+              }
+
+              /*删除导航栏主标题超链接下划线*/
+              .catalog_list_achievements a:link,
+              .catalog_list_achievements a:visited {
+                color: black;
+              }
+
+              /*规定导航栏主标题超链接格式*/
+              .catalog_list_achievements:hover {
+                background-color: #c0d6bb;
+                box-shadow: 0px 5px 5px #888888;
+              }
+
+              /*主标题移动上产生变色和阴影效果*/
+              .catalog:after {
+                content: "";
+                display: table;
+              }
+
+              /*???不知道为啥不能少*/
+              .catalog:after {
+                clear: both;
+              }
+
+              /*清除浮动，???不知道为啥少不了*/
+            </style>
+            <!--导航栏-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <style>
+              #main_body {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0px;
+                padding: 0px;
+              }
+
+              .title {
+                text-align: center;
+                font-family: "Constantia", serif;
+                font-style: italic;
+                font-size: 320%;
+                font-weight: bold;
+                color: #484848;
+                text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.19);
+                margin-top: 3%;
+                margin-bottom: 3%;
+                line-height: 150%;
+              }
+
+              .subtitle {
+                text-align: center;
+                font-family: Helvetica, sans-serif;
+                font-size: 35px;
+                font-weight: normal;
+                margin-top: 20px;
+                margin-bottom: 20px;
+              }
+
+              .words_paragraph {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                text-indent: 36px;
+                text-align: justify;
+                font-size: 20px;
+                /*wiki上面p格式字体会变小很多，推测是字体原因*/
+                line-height: 30px;
+                margin-bottom: 20px;
+              }
+            </style>
+          </p>
+          <div id="navigation_bar_bgwhite">
+            <div id="navigation_bar">
+              <div>
+                <div class="catalog">
+                  <div class="catalog_font a">
+                    <div class="catalog_list_home">
+                      <a href="https://2021.igem.org/Team:NEFU_China">Home</a>
+                    </div>
+                    <div class="catalog_list_project">
+                      <a>Project</a>
+                      <div class="catalog_list_projectdowndrop">
+                        <div class="projectdowndrop_top"><a href="https://2021.igem.org/Team:NEFU_China/Description">Description</a></div>
+                        <div class="projectdowndrop_content"><a href="https://2021.igem.org/Team:NEFU_China/Design">Design</a></div>
+                        <div class="projectdowndrop_content"><a href="https://2021.igem.org/Team:NEFU_China/Engineering">Engineering</a></div>
+                        <div class="projectdowndrop_content"><a href="https://2021.igem.org/Team:NEFU_China/Modeling">Modeling</a></div>
+                        <div class="projectdowndrop_content"><a href="https://2021.igem.org/Team:NEFU_China/Contribution">Contribution</a></div>
+                      </div>
+                    </div>
+                    <div class="catalog_list_outlook">
+                      <a href="https://2021.igem.org/Team:NEFU_China/Outlook">Outlook</a>
+                    </div>
+
+                    <div class="catalog_list_humanpractice">
+                      <a>Experiments</a>
+                      <div class="catalog_list_hpdowndrop">
+                        <div class="hpdowndrop_top"><a href="https://2021.igem.org/Team:NEFU_China/Results">Results</a></div>
+                        <div class="hpdowndrop_content"><a href="https://2021.igem.org/Team:NEFU_China/Parts">Parts</a></div>
+                        <div class="hpdowndrop_content"><a href="https://2021.igem.org/Team:NEFU_China/Proof of Concept">Proof of
+                          Concept</a></div>
+                        <div class="hpdowndrop_bottom"><a href="https://2021.igem.org/Team:NEFU_China/Safety">Safety</a></div>
+                        <div class="hpdowndrop_bottom"><a href="https://2021.igem.org/Team:NEFU_China/Notebook">Notebook</a></div>
+                      </div>
+                    </div>
+                    <div class="catalog_list_humanpractice">
+                      <a>Team</a>
+                      <div class="catalog_list_hpdowndrop">
+                        <div class="hpdowndrop_top"><a href="https://2021.igem.org/Team:NEFU_China/Results">Results</a></div>
+                        <div class="hpdowndrop_content"><a href="https://2021.igem.org/Team:NEFU_China/Parts">Parts</a></div>
+                        <div class="hpdowndrop_content"><a href="https://2021.igem.org/Team:NEFU_China/Proof of Concept">Proof of
+                          Concept</a></div>
+                        <div class="hpdowndrop_bottom"><a href="https://2021.igem.org/Team:NEFU_China/Safety">Safety</a></div>
+                        <div class="hpdowndrop_bottom"><a href="https://2021.igem.org/Team:NEFU_China/Notebook">Notebook</a></div>
+                      </div>
+                    </div>
+                    <div class="catalog_list_humanpractice">
+                      <a>Human Practice</a>
+                      <div class="catalog_list_hpdowndrop">
+                        <div class="hpdowndrop_top"><a href="https://2021.igem.org/Team:NEFU_China/Implementation">Implementation</a></div>
+                        <div class="hpdowndrop_content"><a href="https://2021.igem.org/Team:NEFU_China/Integraed Human Practice">Integraed
+                          Human Practice</a></div>
+                        <div class="hpdowndrop_content"><a href="https://2021.igem.org/Team:NEFU_China/Education and Engagement">Education
+                          and Engagement</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--导航栏-->
+
+          <div class="clear_navigation_bar_float"></div>
+          <!--清除导航栏浮动-->
+        </div>
+        <div class="visualClear"></div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </body>
+</html>

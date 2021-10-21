@@ -1,0 +1,153 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content = "Jonah Anderson">
+
+  <title>iGEM Leiden | 2019 </title>
+  <link rel="stylesheet" href="https://2019.igem.org/Team:Leiden/css/Prewiki?action=raw&ctype=text/css">
+  <!-- <link rel="stylesheet" href="https://2019.igem.org/Team:Leiden/css/Prewiki?action=raw&ctype=text/css">-->
+  <link rel="stylesheet" href="https://2019.igem.org/Team:Leiden/css/fontawesome_min_css?action=raw&ctype=text/css">
+</head>
+<body>
+<script>
+  $(document).ready(function(){
+    MoveContentOutside();
+  })
+</script>
+
+<header>
+  <a class="HeaderLogo" href="https://2019.igem.org/Team:Leiden">
+    <img src="https://2019.igem.org/wiki/images/e/e3/T--Leiden--Logo_notext.jpg">
+  </a>
+  <div class="BlueBar">
+    <div class="Navbar">
+      <a class="Hambo" onclick="Toggle()">
+        <i class="fa fa-bars fa-3x"></i>
+      </a>
+      <div class="dropdown" >
+        <button class="DropButton">
+          <a href="https://2019.igem.org/Team:Leiden/Awards"><i class="fas fa-trophy"></i> Awards</a>
+        </button>
+      </div>
+      <div class="dropdown" >
+        <button class="DropButton">
+          <a href="https://2019.igem.org/Team:Leiden/Experiments"> <i class="fas fa-vial"></i> Lab</a>
+        </button>
+        <div class="DropContent">
+          <a href="https://2019.igem.org/Team:Leiden/Experiments">Experiments</a>
+
+          <a href="https://2019.igem.org/Team:Leiden/Notebook">Notebook</a>
+          <a href="https://2019.igem.org/Team:Leiden/Safety">Safety</a>
+        </div>
+      </div>
+      <div class="dropdown" >
+        <button class="DropButton">
+          <a href="https://2019.igem.org/Team:Leiden/Team"><i class="fas fa-users"></i> Team</a>
+        </button>
+        <div class="DropContent">
+          <a href="https://2019.igem.org/Team:Leiden/Team">Team</a>
+          <a href="https://2019.igem.org/Team:Leiden/Attributions">Attributions</a>
+          <a href="https://2019.igem.org/Team:Leiden/Collaborations">Collaborations</a>
+        </div>
+      </div>
+      <div class="dropdown" >
+        <button class="DropButton">
+          <a href="https://2019.igem.org/Team:Leiden/Human_Practices"><i class="fas fa-comments"></i> Human Practices</a>
+        </button>
+        <div class="DropContent">
+          <a href="https://2019.igem.org/Team:Leiden/Human_Practices">Human Practices</a>
+          <a href="https://2019.igem.org/Team:Leiden/Entrepreneurship">Entrepreneurship</a>
+          <a href="https://2019.igem.org/Team:Leiden/Newsletter">Newsletter</a>
+          <a href="https://2019.igem.org/Team:Leiden/Public_Engagement">Education &<br>Public Engagement</a>
+          <a href="https://2019.igem.org/Team:Leiden/Sponsors">Sponsors</a>
+        </div>
+      </div>
+      <div class="dropdown" >
+        <button class="DropButton">
+          <a href="https://2019.igem.org/Team:Leiden/Description"><i class="fas fa-flask"></i> Project</a>
+        </button>
+        <div class="DropContent">
+          <a href="https://2019.igem.org/Team:Leiden/Description">Description</a>
+          <a href="https://2019.igem.org/Team:Leiden/Demonstrate">Demonstrate</a>
+          <a href="https://2019.igem.org/Team:Leiden/Model">Model</a>
+          <a href="https://2019.igem.org/Team:Leiden/Parts">Parts</a>
+          <a href="https://2019.igem.org/Team:Leiden/Results">Results</a>
+        </div>
+      </div>
+      <div class="dropdown" >
+        <button class="DropButton">
+          <a href="https://2019.igem.org/Team:Leiden"><i class="fas fa-home"></i> Home </a>
+        </button>
+      </div>
+      <div id="MobileNav" style="height: 0px;">
+        <div class="dropdownHambo" >
+          <button class="DropButton">
+            <a href="https://2019.igem.org/Team:Leiden"><i class="fas fa-home"></i> Home </a>
+          </button>
+        </div>
+        <div class="dropdownHambo" >
+          <button class="DropButton ToggleMenu">
+            <a href="javascript:void(0);"><i class="fas fa-flask"></i> Project</a>
+          </button>
+          <div class="DropContent ">
+            <a href="https://2019.igem.org/Team:Leiden/Description">Description</a>
+            <a href="https://2019.igem.org/Team:Leiden/Demonstrate">Demonstrate</a>
+            <a href="https://2019.igem.org/Team:Leiden/Model">Model</a>
+            <a href="https://2019.igem.org/Team:Leiden/Parts">Parts</a>
+            <a href="https://2019.igem.org/Team:Leiden/Results">Results</a>
+          </div>
+        </div>
+        <div class="dropdownHambo " >
+          <button class="DropButton ToggleMenu">
+            <a href="javascript:void(0);"><i class="fas fa-comments"></i> Human Practices</a>
+          </button>
+          <div class="DropContent">
+            <a href="https://2019.igem.org/Team:Leiden/Human_Practices">Human Practices</a>
+            <a href="https://2019.igem.org/Team:Leiden/Entrepreneurship">Entrepreneurship</a>
+            <a href="https://2019.igem.org/Team:Leiden/Newsletter">Newsletter</a>
+            <a href="https://2019.igem.org/Team:Leiden/Public_Engagement">Education & Public Engagement</a>
+            <a href="https://2019.igem.org/Team:Leiden/Sponsors">Sponsors</a>
+          </div>
+        </div>
+        <div class="dropdownHambo " >
+          <button class="DropButton ToggleMenu">
+            <a href="javascript:void(0);"><i class="fas fa-users"></i> Team</a>
+          </button>
+          <div class="DropContent">
+            <a href="https://2019.igem.org/Team:Leiden/Team">Team</a>
+            <a href="https://2019.igem.org/Team:Leiden/Attributions">Attributions</a>
+            <a href="https://2019.igem.org/Team:Leiden/Collaborations">Collaborations</a>
+          </div>
+        </div>
+        <div class="dropdownHambo " >
+          <button class="DropButton ToggleMenu">
+            <a href="javascript:void(0);"><i class="fas fa-vial"></i> Lab</a>
+          </button>
+          <div class="DropContent">
+            <a href="https://2019.igem.org/Team:Leiden/Experiments">Experiments</a>
+
+            <a href="https://2019.igem.org/Team:Leiden/Notebook">Notebook</a>
+            <a href="https://2019.igem.org/Team:Leiden/Safety">Safety</a>
+          </div>
+        </div>
+        <div class="dropdownHambo" >
+          <button class="DropButton ToggleMenu">
+            <a href="https://2019.igem.org/Team:Leiden/Awards"><i class="fas fa-trophy"></i> Awards</a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</header>
+
+<script src="https://2019.igem.org/Team:Leiden/js/jQuery?action=raw&ctype=text/javascript" type="text/javascript"></script>
+<script src="https://2019.igem.org/Team:Leiden/MoveContent?action=raw&ctype=text/javascript" type="text/javascript"></script>
+
+<script src="https://2019.igem.org/Team:Leiden/js/main?action=raw&ctype=text/javascript" type="text/javascript"></script>
+
+
+</body>
+</html>

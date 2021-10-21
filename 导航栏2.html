@@ -1,0 +1,345 @@
+<html>
+<!--<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">-->
+<!--<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">-->
+<!--<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">-->
+<!--<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">-->
+<!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
+
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+  <link rel="icon" href="https://2020.igem.org/wiki/images/7/71/T--SDU-Denmark--Icon.PNG" type="image/png">
+</head>
+
+<script>
+  $( document ).ready( function() {
+    $('link[rel="shortcut icon"]').attr('href','https://2020.igem.org/wiki/images/7/71/T--SDU-Denmark--Icon.PNG');
+  });
+</script>
+
+<style>
+
+  /* This line deletes the default layout elements that we don't need */
+  #sideMenu, #top, #top_title, .patrollink, #firstHeading,  #home_logo, #sideMenu, #mw-body {display: none}
+
+  #bodyContent a[href^="https://"] {
+    background: none;
+    padding: 0;
+  }
+
+  #HQ_page h1, h2, h3, h4, h5 {
+    font-family: 'Libre Franklin', sans-serif;
+    padding: 0%;
+  }
+
+  #HQ_page h1 {
+    font-size: 5em;
+  }
+
+  #HQ_page h2 {
+    font-size: 2rem;
+  }
+
+  #HQ_page p {
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.9
+  }
+
+  #globalWrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  #content {
+    width: 100%;
+    border: none;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: normal;
+    position: relative;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+  }
+
+  /* Add a background color to the top navigation */
+  .topnav {
+    background-color: #2B7780;
+    overflow: auto;
+  }
+
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+
+  }
+
+  /* Add an active class to highlight the current page */
+  .active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+  /* Dropdown container - needed to position the dropdown content */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  /* Style the dropdown button to fit inside the topnav */
+  .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 11;
+  }
+
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  /* Add a dark background on topnav links and the dropdown button on hover */
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+    color: white;
+  }
+
+
+  /* Add a grey background to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  /* Show the dropdown menu when the user moves the mouse over the dropdown button */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* When the screen is less than 670 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  @media screen and (max-width: 670px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 670px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown,   .topnav.responsive .dropdown-HP, .topnav.responsive .dropdown-HW {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn, .topnav.responsive .dropdown-HP .dropbtn-HP, .topnav.responsive .dropdown-HW .dropbtn-HW {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+
+  .bottom_divider {
+    text-align: center;
+    padding: 30px 0;
+    margin: 0;
+    box-shadow: 0 1em 1em -1em rgba(0, 0, 0, .25);
+  }
+
+  .socials-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2% 0;
+  }
+
+  .socials-box .fa {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0 !important;
+    margin: 0 2%;
+    opacity: 75%;
+  }
+
+  .socials-box .fa:hover {
+    opacity: 100%;
+  }
+
+  .facebook-icon {
+    background: #3b5998 !important;
+  }
+
+  .instagram-icon {
+    background: #d6249f !important;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%) !important;
+  }
+
+  .email-icon {
+    background: #2B7780 !important;
+  }
+
+</style>
+
+<script>
+  /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
+
+<script>
+  (function(l){var i,s={touchend:function(){}};for(i in s)l.addEventListener(i,s)})(document); // sticky hover fix in iOS
+</script>
+
+
+<div style="position: fixed; width: 100%; top: 18px; z-index: 10">
+  <nav class="topnav" id="myTopnav">
+    <a style="line-height: normal; padding-left: 25px" href="http://2020.igem.org/Team:SDU-Denmark"><i class="fa fa-home"></i> Home</a>
+    <div class="dropdown">
+      <button class="dropbtn"><i class="fa fa-tint"></i> Our Project
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Description">Description</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Results">Results</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Proof_Of_Concept">Proof of Concept</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Contribution">Contribution</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Sustainable">UN SDGs</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Poster">Poster</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"><i class="fa fa-users"></i> Our Team
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Team">Overview</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Partnership">Partnership</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Attributions">Attributions</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Collaborations">Collaborations</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Inclusion">Inclusion</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"><i class="fa fa-flask"></i> Laboratory
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Laboratory">Design</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Engineering">Engineering</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Parts">Parts</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Notebook">Notebook</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Experiments">Protocols</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Safety">Safety</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"><i class="fa fa-graduation-cap"></i> Human Practices
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Human_Practices">Overview</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Ethics">Ethics</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Interview">Interview</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Education">Science Communication</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Human_Practices/Gamification">Gamification</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Human_Practices/Card_game">Early Detection Game</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Implementation">Proposed Implementation</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"><i class="fa fa-cogs"></i> Hardware
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Hardware">Overview</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Design">Integrated Design</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Model">Modeling</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Entrepreneurship">Entrepreneurship</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn"><i class="fa fa-video-camera"></i> Videos
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Promotion">Project Promotion</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Excellence">Music Video</a>
+        <a href="http://2020.igem.org/Team:SDU-Denmark/Presentaion">Final Presentation</a>
+      </div>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+</div>
+
+</html>
