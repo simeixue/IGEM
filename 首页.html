@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iDEC NEFU_China 2021</title>
+  <link rel="stylesheet" type="text/css" href="web/CSS/main_cssstyle.css">
+  <style>
+    .home-content{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow: hidden;
+      margin: 20px 0;
+      width: 90%;
+    }
+    p{
+      text-indent: 2em;
+      line-height: 1.5;
+      font-size: 1.5rem;
+    }
+    .contact-icon{
+      display: flex;
+      align-items: center;
+      /*font-size: 3em;*/
+      color: white;
+    }
+    .contact-icon a{
+      color: white;
+    }
+    .contact-icon i{
+      font-size: 3em;
+    }
+    body{
+      width: 100%;
+      height: 100%;
+      background:url(https://2021.igem.org/wiki/images/b/bf/T--NEFU_China--Background.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+
+<body class="home">
+
+<!--     首页视频-->
+<div   class="video-div">
+  <video id="video-banner"  autoplay="autoplay" loop muted playsinline>
+    <source src="https://2021.igem.org/wiki/images/e/e4/T--NEFU_China--HOME-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+<div style="display:none" id="marker" class= "triangle-down"> </div>
+<!------------------ BUTTONS ---------------------------->
+<div class="buttons"> </div>
+
+<div id="home-main-body" class="main-page-home-section main-body sections-container" style="padding: 3em 0em 0 0em ;max-width: none">
+  <!--       向下的箭头-->
+  <a href="#home-main-body" class="arrow-down">
+    <div class="arrow-down-scroll2">
+      <i class="fas fa-angle-down pulse"></i>
+      <i class="fas fa-angle-down"></i>
+    </div>
+    <div class="arrow-down-scroll">
+      <i class="fas fa-angle-down pulse"></i>
+      <i class="fas fa-angle-down"></i>
+    </div>
+  </a>
+  <div >
+    <p>Since the ancient time, infectious diseases have been posing serious threats to the human health and social development, causing far more human deaths than the wars collectively. To date, more than 230 million cases of COVID-19 have been confirmed worldwide. The ravages and threats of the virus, as well as the death of relatives and friends, have brought great distress to people globally.</p>
+  </div>
+  <div class="figure-container auto-margin">
+    <img src="https://2021.igem.org/wiki/images/4/4a/T--NEFU_China--HOME-1.png" alt="">
+  </div>
+  <h2>Limitation</h2>
+  <div class="home-content">
+    <img style="width: 50%" src="https://2021.igem.org/wiki/images/2/24/T--NEFU_China--HOME-2.png" alt="">
+    <p>Currently, most of the existing detection methods have limitations to different extents, such as the demands for high temperature, large instruments and technology. These make it only possible for these detections be conducted in advanced laboratories.</p>
+  </div>
+  <h2>Model</h2>
+  <div class="home-content">
+    <p>The time spent between sampling and test result reporting is essential for the control of infectious diseases. For example, there is a tremendous difference between a 3-day window and a 10-day window to trace the spread of an epidemic in a large city. We established the SEIR epidemic model based on the real situation. By adjusting various parameters that may be affected by the window period, we generated a diagram based on the results of the joint analyses of many factors (Figure xxxx). The data suggested great significance of our project, and also inspired us what requirements
+      and conditions should be met when developing a quick and practical detection method.
+    </p>
+    <img style="width: 50%;margin-left: 10%"  src="https://2021.igem.org/wiki/images/5/59/T--NEFU_China--HOME-3.png" alt="">
+  </div>
+  <h2>Idea</h2>
+  <div >
+    <p>What we want to do is not just to reduce the time window of virus detection, but also to construct a rapid detection platform. As long as a new pathogen appears, we can quickly adapt our protocol to test it. We have achieved the programmability of the detection platform to respond to different types of emerging pathogens, and only need to change a few components prior to its immediate test and application. In addition, we also ensure that the detection will be sensitive, specific and convenient. On the [Design] page, you can see how this was achieved. </p>
+  </div>
+  <div class="figure-container auto-margin">
+    <img src="https://2021.igem.org/wiki/images/e/e8/T--NEFU_China--HOME-4.png" alt="">
+  </div>
+  <br><br>
+</div>
+
+
+<a href="#" id="mobile-to-top-arrow" class="to-top">
+  <p style="font-size: 10px;text-align: center">Top of</p>
+  <p style="font-size: 10px;text-align: center">the page</p>
+  <img style="max-height: 70px" src="web/resources/to_top.png">
+</a>
+<!---------- 页脚FOOTER ------------>
+<footer id="footer">
+  <div class="contact-info">
+    <div class="contact-info-content">
+      <!--- About Us-->
+      <div class="box">
+        <h3>
+          About Us
+        </h3>
+        <p>
+          This team is composed of enthusiastic  students from three different colleges and various majors. To spy out the secrets of directed evolution, a group of beginners are looking forward to creating extraordinary experiences and we did it.
+        </p>
+      </div>
+      <!---- Follow Us -->
+      <div class="box">
+        <h3>
+          Helpful links
+        </h3>
+        <h4><a target="_blank" href="web/resources/poster.jpg">Poster</a></h4>
+        <h4><a target="_blank" href="web/page/PROJECT/Design.html">Design</a></h4>
+        <h4><a target="_blank" href="web/page/DOCUMENTATION/Notebook.html">Notebook</a></h4>
+      </div>
+      <!---- Contact Us-->
+      <div class="box">
+        <h3>
+          Address
+        </h3>
+        <p>
+          Northeast Forestry University, Harbin, Heilongjiang 150040, P. R. China
+        </p>
+      </div>
+    </div>
+    <hr color="white">
+    <div class="contact-info-content">
+      <div class="contact-icon">
+        <a target="_blank" href=""> <i class="fa fa-envelope"></i>IDEC_NEFU2021@163.com</a>
+      </div>
+      <div class="contact-icon">
+        <a target="_blank" href=""> <i class="fab fa-facebook-square"></i>iDEC NEFU China</a>
+      </div>
+      <div class="contact-icon">
+        <a target="_blank" href=""> <i class="fab fa-twitter-square"></i>iDEC NEFU</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://2021.igem.org/Template:NEFU_China/js/jQuery?action=raw&amp;ctype=text/javascript" type =text/javascript></script>
+<script src="https://2021.igem.org/Template:NEFU_China/js/detect?action=raw&amp;ctype=text/javascript" type= "text/javascript"></script>
+<script src="https://2021.igem.org/Template:NEFU_China/js/main_javascript?action=raw&ctype=text/javascript" type =text/javascript></script>
+<script src="https://2021.igem.org/Template:NEFU_China/js/MoveContent?action=raw&amp;ctype=text/javascript " type= "text/javascript"></script>
+<script src="https://kit.fontawesome.com/50c1a3d91f.js" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    MoveContentOutside();
+  });
+</script>
+
+
+</body>
+</html>

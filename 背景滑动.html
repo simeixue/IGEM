@@ -1,0 +1,475 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      background-image: url(https://2020.igem.org/wiki/images/b/b5/T--NEFU_China--labBack.png);
+      background-attachment: fixed;
+      overflow: hidden;
+    }
+    #center{
+      margin: 0 auto;border: 1px solid;width: 980px; border-style: none;
+    }
+    p{
+      text-indent: 25px;
+    }
+    .top{
+      margin-top: -100px;
+    }
+    .topImg{
+      width: 100%;
+      margin-top: -75px;
+      margin-left: 0px;
+    }
+    .ziti1{
+      color: rgb(41, 81, 107);
+      font-size: 4pc;
+      font-family:Georgia, 'Times New Roman', Times, serif !important;
+      height:60px;
+    }
+    .ziti2{
+      color: rgb(120, 115, 175);
+      font-size: 2.5pc;
+      font-family:Georgia, 'Times New Roman', Times, serif !important;
+      height:60px;
+    }
+    .ziti3{
+      color: rgb(113, 178, 234);
+      font-size: 1.5pc;
+      font-family:Georgia, 'Times New Roman', Times, serif !important;
+      height:60px;
+    }
+    #center p{
+      font-size:20px;
+      color: rgb(92,122,141);
+      font-family:Arial, Helvetica, sans-serif;
+    }
+    a:hover{
+      text-decoration: none;
+    }
+
+
+    .option{
+      cursor: pointer;
+      position: relative;
+
+    }
+    .option i{
+      display: block;
+      width: 10px;
+      text-align: center;
+      height: 60px;
+      line-height: 60px;
+      background: #a1171700;
+      font-size: 20px;
+      transition: 0.6s;
+
+
+    }
+    .option:hover i{
+      color: #3498db;
+    }
+    .text{
+      position: absolute;
+      height: 60px;
+      width: 220px;
+      background: #3498db;
+      top: 0;
+      z-index: -1;
+      left: -170px;
+      color: #fff;
+      line-height: 60px;
+      text-align: center;
+      transition: 0.6s;
+    }
+    .option:hover .text{
+      left:0px;
+      border-top-right-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+    #center{
+      margin: 0 auto;border: 1px solid;width: 980px; border-style: none;
+    }
+    .c1{
+      background-color: rgb(172,227,254);
+      border-top-right-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+    .c2{
+      background-color: rgb(80,160,215);
+      border-top-right-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+    .c3{
+      background-color: rgb(144,181,221);
+      border-top-right-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
+    #sideMenuControl{
+      position: fixed;
+      top: 15%;
+    }
+    #sideToggle{
+      display:none;
+    }
+    #sideToggle:checked + aside{
+      left:0;
+    }
+    #sideToggle:checked ~ #wrap{
+      padding-left:30px;
+    }
+    aside{
+      position:fixed; top:20%;
+      left:-110px;
+      width:30px;
+      background:white;
+      transition:0.2s ease-out;
+      -webkit-transition:0.2s ease-out;
+      z-index:100;
+    }
+    #wrap{
+      margin-left:0px;
+      transition:0.25s ease-out;
+      -webkit-transition:0.25s ease-out; }
+    #wrap > label{
+      display:inline-block;
+    }
+    #wrap > label{
+      float:left;
+      background:#005e99;
+      border-radius:50px;
+      color: #FFF;
+      cursor: pointer;
+      display: block;
+      font-family: Courier New;
+      font-size: 25px;
+      font-weight: bold;
+      width: 30px;
+      height: 30px;
+      line-height: 35px;
+      text-align: center;
+      text-shadow: 0 -4px;
+    }
+    #wrap > label:hover{
+      background:orange;
+    }
+    .sponserImg{
+      width: 100%;
+      z-index: -1;
+      margin-bottom: -150px;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    .QQ{
+      z-index: 50;
+      position: relative;
+      left: 402px;
+      top: 35px;
+      width: 50px;
+      opacity: 0;
+    }
+    .Emial{
+      z-index: 50;
+      position: relative;
+      left: 475px;
+      top: 37px;
+      width: 50px;
+      opacity: 0;
+    }
+    .WeChat{
+      z-index: 50;
+      position: relative;
+      left: 548px;
+      top: 32px;
+      width: 55px;
+      opacity: 0;
+    }
+    .Phone{
+      z-index: 50;
+      position: relative;
+      left: 621px;
+      top: 35px;
+      width: 50px;
+      opacity: 0;
+    }
+    .F{
+      z-index: 50;
+      position: relative;
+      left: 702px;
+      top: 28px;
+      width: 65px;
+      height: 65px;
+      opacity: 0;
+    }
+    .Bird{
+      z-index: 50;
+      position: relative;
+      left: 750px;
+      top: 25px;
+      width: 65px;
+      opacity: 0;
+    }
+    .Photo{
+      width:50%;
+      height:50%;
+    }
+  </style>
+
+</head>
+<body ontouchstart>
+<style>
+  /*加载动画*/
+  #preloader {
+    background-color: rgb(241, 241, 204);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  #loader {
+    display: block;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  /*加载文字*/
+  #load_word{
+    color: white;
+    font-size: 2em;
+  }
+</style>
+
+<body>
+<!--加载开始-->
+<div id="preloader">
+  <div id="loader"><img src="https://2020.igem.org/wiki/images/7/71/T--NEFU_China--%E5%8A%A0%E5%8A%A0%E5%8A%A0%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif
+" alt="" style="width:15vw;"></div>
+  <div id="load_word"><span>loading...</span></div>
+</div>
+</body>
+
+
+
+
+<script>
+  //加载动画
+  $(window).on('load',function(){
+    $('#preloader').fadeOut(500);
+    $('body').css("overflow","visible");
+  });
+  var window_H = $(window).height();
+  $('#preloader').height(window_H);
+</script>
+
+
+<input type='checkbox' id='sideToggle'>
+<aside>
+  <div class="contact-info">
+    <div class="option">
+      <i ><div class="c1">&nbsp;</div></i>
+      <div class="text c1"><a href="#1">Improvement</a></div>
+    </div>
+    <div class="option">
+      <i ><div class="c2">&nbsp;</div></i>
+      <div class="text c2"><a href="#2">Report system</a></div>
+    </div>
+
+    <div class="option">
+      <i ><div class="c3">&nbsp;</div></i>
+      <div class="text c3"><a href="#3">Simulative field test</a></div>
+    </div>
+  </div>
+</aside>
+<div id="wrap">
+  <label id='sideMenuControl' for='sideToggle'>=</label>
+</div>
+<div class="top">
+  <img class="topImg" src="https://2020.igem.org/wiki/images/6/67/T--NEFU_China--results5.jpg" alt=""></div>
+<div id="center">
+  <div>
+
+
+    <br><br><br><br><br><p>
+    Due to the impact of the COVID-19 pandemic, we could only carry out our laboratory experiments for three months, much shorter than that of previous years. However, we have still successfully completed our project during this short time period.<br><br><br><br>
+  </p>
+  </div>
+  <div>
+    <center><h1 class="ziti1">Experimental Design</h1></center>
+    <p>
+      The 2,4-dinitrotoluene (DNT) released in the soil by landmines can activate the synthesis of EGFP in the engineered bacteria and emit green fluorescence. The photoresistor can capture the fluorescent light, convert it to an electrical signal and transmit it to a designated app in a smartphone through the Internet of Things. The software can analyze the data and propose the best demining route that will assist the actual landmine clearance.<br><br><br><br>
+    </p>
+    <a id="1"></a>
+    <center> <h1 class="ziti1" style="height:150px;line-height:60px;">Ⅰ. Improvement of the <br> <i>yqjF</i> Promoter</h1></center>
+  </div>
+  <div>
+    <center><h1 class="ziti2">Description</h1></center>
+    <p>
+      Microorganism-based demining was proposed previously <sup>[1]</sup>, but a highly sensitive biosensor could not be identified to detect the chemicals released by landmines and thus the application of this proposal had not been achieved. This year we found a promoter called <i>yqjF</i> that can be activated by DNT. The <i>yqjF</i> promoter is the key component of our landmine detection system. Thus, the primary task of our iGEM team was to optimize or improve the sensitivity of the <i>yqjF</i> promoter in detecting DNT. This promoter was initially discovered to regulate the metabolism of aromatic compounds, but later on its activation in response to explosive chemicals, such as DNT and 2,4,6-Trinitrotoluene (TNT) was also reported <sup>[2]</sup>. The mechanism of the <i>yqjF</i> promoter activation and metabolic process of DNT in bacteria are schematically presented in Fig. 1.
+    </p>
+    <center><img src="https://2020.igem.org/wiki/images/d/d4/T--NEFU_China--REsults1.png" alt="" class="Photo" style="width:80%;"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:1000;text-align:center;">Fig. 1. Schematic diagrams of the <i>yqjF</i> promoter activation and the metabolism of DNT in bacteria.</p></center>
+    <p>
+      In the bacteria, DNT can be metabolized to 2,4,5-trihydroxytoluene (THT) when catalyzed by several enzymes, including NfsA, NfsB and NemA reductases. THT is the molecule that directly activates the transcription factor YhaJ, which then drives the expression mediated by the <i>yqjF</i> promoter. Based on previous report, the DNT detection threshold of the <i>yqjF</i> promoter is 25 mg/L <sup>[2]</sup>, which is much higher than what we need in landmine detection. Therefore, we need to optimize the <i>yqjF</i> promoter to improve its sensitivity in DNT detection.
+    </p>
+  </div>
+  <div>
+    <center><h1 class="ziti2">Results</h1></center>
+    <p>
+      First, we wanted to construct a system to evaluate the responsiveness of the wild-type <i>yqjF</i> promoter to DNT and its detection threshold. We amplified the wild-type <i>yqjF</i> promoter from the genomic DNA of bacteria, inserted the <i>EGFP</i>, as a reporter, at its downstream, and thus generated the reporter plasmid pYB1a-<i>yqjF::EGFP</i>. This reporter was transformed into <i>Escherichia coli DH5α</i> for the following experiments.</p>
+    <p>
+      We then tested the induction of the reporter system by different concentrations of DNT (20, 25, 30, 40 and 50 mg/L). EGFP intensity in response to DNT changes was shown in Fig. 2. The results indicated that the pYB1a-<i>yqjF::EGFP</i> system could be induced by DNT; however, when the DNT concentration dropped to 20 mg/L, the system showed no response, suggesting that the DNT detection limit of the wild-type <i>yqjF</i> promoter was around 25 mg/L, consistent with the reported value in previous literature <sup>[2]</sup>.
+    </p>
+    <center><img src="https://2020.igem.org/wiki/images/c/c0/T--NEFU_China--RESULTS2.png" alt="" class="Photo"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 2. Assay to evaluate the DNT detection threshold of the wild-type <i>yqjF</i> promoter.</p></center>
+    <br><br>
+    <p>
+      Based on the data above, we need to optimize our system and improve the sensitivity of the reporter expression induced by DNT. For this purpose, we will focus on the following aspects, including (1) modifying the essential elements of the <i>yqjF</i> promoter to enhance transcription strength, (2) promoting the conversion from DNT to THT <sup>[3]</sup>, which is the key molecule to trigger the promoter, and (3) optimizing the transcription activator YhaJ to elevate its responsiveness to the inducer THT.
+    </p>
+  </div>
+  <div>
+    <br><br><h1 class="ziti3" style="height:25px;">(1) Mutagenesis Study of the <i>yqjF</i> Promoter</h1>
+    <b><p>a. Semi-rational Mutagenesis</p></b>
+    <p>
+      To improve the strength of the <i>yqjF</i> promoter in response to DNT induction, we carried out mutagenesis studies of its essential elements and screened for the mutants with increased transcription activity in the reporter system. </p>
+    <p>
+      First, we conducted the semi-rational mutagenesis in the -35 region of the <i>yqjF</i> promoter. We designed the primer <i>yqjF</i>-35-F containing random DNA sequences covering the 9 nucleotides of this region (Fig. 3), which was used together with a downstream primer in PCR amplification. We tested about 500 clones with the <i>yqjF</i> promoter randomly mutated at the 9 nucleotides and tested their response to 30 mg/L of DNT.
+    </p>
+    <center><img src="https://2020.igem.org/wiki/images/8/85/T--NEFU_China--RESULTS3.png" alt="" class="Photo" style="width:80%;"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 3. The -35 region sequence of the <i>yqjF</i> promoter and the random primer used in the semi-rational mutagenesis. </p></center>
+    <center><img src="https://2020.igem.org/wiki/images/a/a6/T--NEFU_China--RESULTS4.png" alt="" class="Photo" style="width:80%;"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 4. Assay to determine the EGFP production by the mutated <i>yqjF1st</i> promoter induced by 30 mg/L DNT.</p></center>
+    <p>
+      As shown in Fig. 4, among screened clones, we found that many of them showed reduced EGFP induction by 30 mg/L DNT, but one mutant reporter, marked as a red bar, exhibited over 2-fold of increased responsiveness than that of the reporter containing the wild-type <i>yqjF</i> promoter. We sequenced this clone and found that it contained three nucleotide mutations around the -35 region (Fig. 5). We named this mutant as the <i>yqjF1st</i> promoter, with enhanced responsiveness to DNT induction.
+    </p>
+    <center><img src="https://2020.igem.org/wiki/images/4/47/T--NEFU_China--RESULTs5.png" alt="" class="Photo" style="width:80%;"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 5. Comparison of the sequence of <i>yqjF1st</i> promoter with wild-type <i>yqjF</i> promoter.  </p></center>
+    <b><p>b. Error-prone PCR Mutagenesis</p></b>
+    <p>
+      We also employed a random mutagenesis kit to introduce random mutations in the <i>yqjF</i> promoter through PCR amplification. We first optimized the amounts of the mutagenesis enhancer to evaluate the correlation of its concentration with the mutation rate, and determined its appropriate amount to be used in our study. Using this optimized condition, we carried out the error-prone PCR and screened about 300 clones for their responsiveness to the induction of 30 mg/L DNT.
+    </p>
+    <p>
+      As shown in Fig. 6, we discovered one mutated <i>yqjF</i> promoter with over 2-fold higher induction by DNT than that of the wild-type <i>yqjF</i> promoter. This <i>yqjF</i> promoter mutant was named as the <i>yqjF2nd</i> promoter and it contains three nucleotide mutations that are located between the -10 region (Pribnow box) and the ribosome binding site (RBS) (Fig. 7). Thus, this segment with the mutations should be transcribed into mRNA. We predicted that the mutations of these three nucleotides could likely increase the mRNA stability and/or promote the translation process, leading to enhanced expression of EGFP. Interestingly, the enhancement of the <i>yqjF2nd</i> promoter seemed to be slightly better than that of the <i>yqjF1st</i>.
+    </p>
+    <center><img src="https://2020.igem.org/wiki/images/5/59/T--NEFU_China--RESULTS6.png" alt="" class="Photo"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 6. Screening of the random <i>yqjF</i> promoter mutants for their activity in driving EGFP expression.</p></center>
+    <center><img src="https://2020.igem.org/wiki/images/2/29/T--NEFU_China--RESULT7.png" alt="" class="Photo" style="width:80%;"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 7. The sequence comparison of the wild-type and the <i>yqjF2nd</i> promoter with enhanced responsiveness to DNT induction. RBS: ribosome binding site.</p></center>
+    <p>
+      Using site-direct mutagenesis, we combined the mutations of the <i>yqjF1st</i> and <i>yqjF2nd</i> to generate a newer version of the promoter, designated as the <i>yqjF3rd</i> promoter. We tested the response of the reporter containing the <i>yqjF3rd</i> promoter to the induction of different concentrations of DNT (2.5, 5, 10, 15 and 20 mg/L), and found that the <i>yqjF3rd</i> promoter showed a DNT detection threshold of 5 mg/L (Fig. 8). Thus, with the combination of the <i>yqjF1st</i> and <i>yqjF2nd</i>, we generated the <i>yqjF3rd</i> promoter that exhibited 5-fold increase of DNT detection sensitivity compared to the wild-type <i>yqjF</i> promoter.
+    </p>
+    <center><img src="https://2020.igem.org/wiki/images/b/b6/T--NEFU_China--RESULTs8.png" alt="" class="Photo"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 8. DNT detection by the reporter containing the <i>yqjF3rd</i> promoter.</p></center>
+  </div>
+  <div>
+    <br>
+    <br><h1 class="ziti3">(2) Promoting the DNT-to-THT Conversion</h1>
+    <p>
+      As we indicated above, THT is the chemical that binds to the transcription activator and consequently activate the <i>yqjF</i> promoter <sup>[4]</sup>. Thus, if DNT can be quickly converted to THT in bacteria, we may promote the reporter system. For this purpose, we planned to establish a system of using an arabinose-inducible promoter to ectopically express the three key enzymes, NfsA, NfsB and NemA that are involved in catalyzing DNT to THT. As shown in Fig. 9, the engineered bacteria expressing the three enzymes showed a DNT detection threshold of 1 mg/L, which was 5-fold increase compared to the bacteria without the three enzymes.
+    </p>
+    <center><img src="https://2020.igem.org/wiki/images/0/0f/T--NEFU_China--RESULTS9.png" alt="" class="Photo"></center>
+    <p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 9. Effects of NfsA, NfsB and NemA overexpression on the <i>yqjF3rd</i> promoter-mediated DNT detection in engineered bacteria.</p>
+  </div>
+  <div>
+    <br><br><h1 class="ziti3">(3) Overexpression of the Transcription Activator YhaJ</h1>
+    <p>
+      To further improve the DNT detection sensitivity, we planned to overexpression
+      YhaJ, a transcription activator <sup>[5]</sup>. that can be activated by THT and drive the <i>yqjF</i> promoter-mediated EGFP expression. We generated the engineered bacteria with YhaJ overexpression and tested their response to different concentrations of DNT. As shown in Fig. 10, YhaJ overexpression could remarkably reduce the DNT detection threshold to 0.25 mg/L, much lower than the case without its ectopic expression. For the mechanism underlying this significantly enhanced sensitivity, we predicted that THT molecules could have saturated the endogenous YhaJ proteins to activate their transcriptional activity; with overexpressed YhaJ, more THT would have chances to bind increasingly expressed YhaJ and cause their activation, consequently leading to robustly enhanced EGFP transcription even at relatively low amounts of DNT.
+    </p>
+    <center><img src="https://2020.igem.org/wiki/images/3/3d/T--NEFU_China--RESULTS10.png" alt="" class="Photo" style="width:80%;"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 10. Effects of YhaJ overexpression on DNT detection sensitivity of engineered bacteria.</p></center>
+    <p>
+      Next, we asked whether the combination of the two strategies of promoting DNT-to-THT conversion and overexpressing YhaJ could further improve the DNT detection sensitivity of the engineered bacteria. As we demonstrated above, the introduction of the three enzymes or overexpression of YhaJ could reduce the DNT detection thresholds to 1 and 0.25 mg/L, respectively. To our surprise, the combinatorial use of these two approaches did not further reduce the DNT detection threshold, but instead exhibited a detection limit of 0.75 mg/L (Fig. 11). We predicted that the co-expression of all these proteins could cause undetermined conflicts or overload the bacteria, and thus the combination of the two strategies would not be able to further increase the sensitivity.
+    </p>
+    <center><img src="https://2020.igem.org/wiki/images/a/a9/T--NEFU_China--results11new.png" alt="" class="Photo" style="width:80%;"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 11. The effects of increasing THT production and overexpressing YhaJ individually or combinatorially on DNT detection sensitivity.</p></center>
+    <p>
+      We further investigated whether we could optimize the transcription activator YhaJ to further improve the detection sensitivity. Employing random mutagenesis approach, we generate the YhaJ mutant library and screen over 500 clones to evaluate their effects on <i>yqjF3rd</i> promoter-mediated EGFP expression in response to 10 mg/L DNT. Based on the data of Fig. 12, we discovered that one YhaJ mutant showed markedly increased EGFP production compared to the wild-type YhaJ. Based on DNA sequencing analysis, this mutant, named as yhaJ1st, had three mutations at the amino acids 31Leu, 96Ala and 175Val. As shown in Fig. 12, <i>YhaJ1st</i> overexpression could remarkably reduce the DNT detection threshold to 0.1 mg/L. Furthermore, we analyzed the protein structure of transcription activator YhaJ using the SWISS-MODEL software, which is a tetramer, and totally has four DNA binding sites, named as the HTH domain (Fig. 13a and 13b). Interestingly, one of these mutations, 31Val, was just located at the DNA binding domain of the YhaJ unit (Fig. 13c). Thus, it is possible that this mutation could improve the binding of YhaJ to DNA and thus enhance its activation to the <i>yqjF</i> promoter.
+    </p>
+    <center><img src="https://2020.igem.org/wiki/images/7/73/T--NEFU_China--result12new.png" alt="" class="Photo" style="width:100%;"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 12. a. The effects of the yhaJ mutations on the <i>yqjF3rd</i> promoter-driven EGFP expression in response to 10 mg/L DNT. b. <i>YhaJ1st</i> overexpression could remarkably reduce the DNT detection threshold to 0.1 mg/L. </p></center>
+    <br><br><center><img src="https://2020.igem.org/wiki/images/5/5d/T--NEFU_China--RESULTS13.png" alt="" class="Photo" style="width:80%;"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 13. The structure of the transcription activator YhaJ. a. The structure of the YhaJ tetramer. b. The structure of the YhaJ tetramer with highlighted DNA binding domains. c. The position of the mutated amino acid from Leu to Val in the DNA binding domain of the YhaJ1st transcription activator.</p></center>
+  </div>
+  <div>
+    <a id="2"></a>
+
+    <br><br><br><br><br><br><br><center><h1 class="ziti1" style="height:190px;line-height:60px;">Ⅱ. The Optimization of the Reporter System</h1></center>
+    <center><h1 class="ziti2">Description</h1></center>
+    <p>
+      Currently, we created our reporter system with EGFP as a reporter gene. However, the green fluorescence emitted by the EGFP protein needs an excitation light, which has been added in our system. To avoid the false stimulation of the photoresistor by the excitation light, we must block it by putting a filter between the light source and the photoresistor. All these have increased the complexity of the hardware in our landmine detection device. Thus, we considered whether we should employ an autofluorescence system to replace the current green fluorescence reporter, which would simplify the design of our device. After thorough discussion and literature research, we decided to test the Lux luciferase system. We tested this bioluminescent system and obtained preliminary results.
+    </p>
+    <br><br><br><center><h1 class="ziti2">Preliminary Results</h1></center>
+    <p>
+      The Lux luminescent reporter system consists of <i>LuxABCDE</i> genes. Among them, <i>LuxAB</i> encode the Lux luciferase, while <i>LuxCDE</i> can convert long-chain fatty acids to long-chain fatty aldehydes <sup>[6]</sup>, which can be used as substrates of the Lux luciferase and generate bioluminescence (Fig. 14). Thus, we constructed a reporter plasmid with the third generation of the <i>yqjF</i> promoter (i.e. the <i>yqjF3rd</i> promoter) driving the expression of the Lux, <i>yqjF3rd::LuxCDABE</i>, and test its responsiveness to DNT induction in bacteria. As shown in Fig. 15, the <i>yqjF3rd::LuxCDABE</i> system showed a DNT detection threshold of 5 mg/L.
+    </p>
+    <center><img src="https://2020.igem.org/wiki/images/6/65/T--NEFU_China--RESULTS14.png" alt="" class="Photo"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 14. Schematic diagrams of the principle of luminescence.</p></center>
+    <center><img src="https://2020.igem.org/wiki/images/c/c1/T--NEFU_China--RESULTS15.png" alt="" class="Photo"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 15. The reporter system of the <i>LuxCDABE</i> driven by the <i>yqjF3rd</i> promoter and its responsiveness to DNT induction.</p></center>
+    <p>
+      Since the Lux luciferase uses long-chain fatty aldehydes as its substrates, we planned to add these aldehydes to the system to stimulate its luminescence. We tested decyl aldehyde and found that it could indeed enhance the luminescence production by the <i>yqjF3rd::LuxCDABE</i>, when compared with a control chemical glucose at the same concentration (Fig. 16). Thus, we will put effort in investigating whether the Lux reporter system can be a better or optional system versus the EGFP reporter that we have extensively studied. If the Lux reporter system can achieve similar or even better DNT detection sensitivity, we can build a relatively simple landmine detection device by eliminating the excitation light source and light filter in the current device. We may just need to add decyl aldehyde in the Alginate gel to provide extra substrates to the Lux luciferase that is induced by DNT. The experiments of optimizing the Lux reporter system for landmine detection is still ongoing.
+    </p>
+    <center><img src="https://2020.igem.org/wiki/images/4/47/T--NEFU_China--RESULTS16.png" alt="" class="Photo" style="width:35%;"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 16. Decyl aldehyde could promote the bioluminescence production of the Lux reporter system in comparison of glucose.</p></center>
+  </div>
+  <div><a id="3"></a>
+    <br><br><br><br><br><br><br><center><h1 class="ziti1" style="height:155px;line-height:60px;">Ⅲ. Simulative Field Test</h1></center>
+    <center><h1 class="ziti2">Description</h1></center>
+    <p>All experiments described above are carried out under the conditions of research laboratories, but our device will be eventually used in open fields or even in battlefields. Thus, we tested long-term preservation of the engineered bacteria and their responsiveness to DNT induction in simulative open field conditions.</p>
+    <br><br><br><br><center><h1 class="ziti2">Results</h1></center>
+    <p>
+      During our interaction with the iGEM team from Tsinghua University-affiliated High School (QHFZ_China), we learned that their project for this year is to use the CAHS protein of the Water Bear for the preservation of bacteria. Our team has built active collaborations with the QHFZ_China team and they provided us the CAHS protein to test our bacteria. We hoped that the CAHS protein would significantly increase the survival rates of our engineered bacteria during resuscitation. Thus, we tested the effect of the CAHS protein on the resuscitation of our bacteria after they were freeze-dried into powder. As shown in Fig. 17, the presence of the CAHS protein could increase the survival rate of our engineered bacteria by 3-fold during resuscitation, as compared to the condition without this protein.
+      <br></p>
+    <center><img src="https://2020.igem.org/wiki/images/8/8c/T--NEFU_China--result7.png" alt="" class="Photo" style="width:30%;"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 17. The presence of the CAHS protein could increase the survival rates of the engineered bacteria during resuscitation.</p></center>
+    <p>Meanwhile, we also tested the DNT responsiveness of our engineered bacteria immediately after their resuscitation. Although the revived bacteria from the freeze-dried powder could well respond to DNT, its long-term induction reached a platform after about 6 hours (Fig. 18). Thus, the bacterial preservation based on the CAHS protein could be used in the bacterial transportation, although their long-term induction by DNT may be attenuated. </p>
+    <center><img src="https://2020.igem.org/wiki/images/6/6c/T--NEFU_China--RESULTS17.png" alt="" class="Photo"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 18. Comparison of the luminescence production induced by 10 mg/L of DNT in the engineered bacteria resuscitated after being freeze-dried into powder versus freeze-stored in glycerin.</p></center>
+    <p>
+      In the practical operation of our device, the resuscitated bacteria will be kept in the Alginate gel and then immobilized to the interior wall of the device. Thus, we must make sure that the engineered bacteria could survive in the Alginate gel for a long period of time. To test this, we evenly mixed the engineered bacteria with the gel and kept them individually at 4°C and 20°C. Fractions of the bacteria-containing gel were excised every 2 days and spread on individual LB-agar plates to test the growth capability of the bacteria. As shown in Fig. 19, the bacteria maintained decent growth capability even after being kept for 6 days at both temperatures.
+    </p>
+    <br><center><img src="https://2020.igem.org/wiki/images/2/23/T--NEFU_China--RESULTS19.png" alt="" class="Photo" style="width:80%;"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 19. The growth capability of the engineered bacteria after being kept in the Alginate gel at 4°C and 20°C for different periods of time.</p></center><br>
+    <p>
+      Finally, we wanted to test the responsiveness of our engineered bacteria to DNT released from soil in an open field scenario. As described above, we immobilized the bacteria in the Alginate gel and loaded the gel onto the soil mixed with different amounts of DNT <sup>[7]</sup>. As shown in Fig. 20, the immobilized bacteria could steadily detect the DNT released from the soil.
+    </p>
+    <center><img style="width: 50vw;" src="https://2020.igem.org/wiki/images/5/5f/T--NEFU_China--results20new3.png" alt="" class="Photo"></center>
+    <center><p style="font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;text-align:center;">Fig. 20. The engineered bacteria immobilized in the Alginate gel could respond the DNT released from the soil. The horizontal axis is the amounts of DNT versus soil (mg/kg).<br></p></center>
+    <p>
+      Based on these tests, we conclude that the engineered bacteria can be resuscitated and then used to detect the DNT released from the soil in an open field. Thus, our project represents a connection between the synthetic biology in laboratory and its application in natural environment.
+    </p>
+  </div>
+  <div>
+    <br><br><br><br><br><center><h1 style="font-size:20px;" class="ziti3">References</h1></center>
+    <p style="text-indent: 0;font-family: 'YouYuan' !important;font-size:16px !important;color: black;font-weight:bolder;">
+      [1] Burlage, R S, Youngblood, T, & Lamothe, D. Bioreporter bacteria for landmine detection. United States. doi:10.2172/645466.
+      <br>[2] Yagur-Kroll, S., Lalush, C., Rosen, R., Bachar, N., Moskovitz, Y., & Belkin, S. (2014). Escherichia coli bioreporters for the detection of 2,4-dinitrotoluene and 2,4,6-trinitrotoluene. Applied microbiology and biotechnology, 98(2), 885–895. https://doi.org/10.1007/s00253-013-4888-8
+      <br>[3] González-Pérez, M. M., van Dillewijn, P., Wittich, R. M., & Ramos, J. L. (2007). Escherichia coli has multiple enzymes that attack TNT and release nitrogen for growth. Environmental microbiology, 9(6), 1535–1540. https://doi.org/10.1111/j.1462-2920.2007.01272.x
+      <br>[4] Shemer, B. , Yagur-Kroll, S. , Hazan, C. , & Belkin, S. . (2017). Aerobic transformation of 2,4-dinitrotoluene by escherichia coli and its implications for the detection of trace explosives. Appl Environ Microbiol, AEM.01729-17.
+      <br>[5] Palevsky, N., Shemer, B., Connolly, J. P., & Belkin, S. (2016). The Highly Conserved Escherichia coli Transcription Factor YhaJ Regulates Aromatic Compound Degradation. Frontiers in microbiology, 7, 1490. https://doi.org/10.3389/fmicb.2016.01490
+      <br>[6] Yagur-Kroll, S., & Belkin, S. (2011). Upgrading bioluminescent bacterial bioreporter performance by splitting the lux operon. Analytical and bioanalytical chemistry, 400(4), 1071–1082. https://doi.org/10.1007/s00216-010-4266-7
+      <br>[7] Belkin, S., Yagur-Kroll, S., Kabessa, Y., Korouma, V., Septon, T., Anati, Y., Zohar-Perez, C., Rabinovitz, Z., Nussinovitch, A., & Agranat, A. J. (2017). Remote detection of buried landmines using a bacterial sensor. Nature biotechnology, 35(4), 308–310. https://doi.org/10.1038/nbt.3791
+    </p>
+  </div>
+</div>
+<div class="sponser">
+  <img src="https://2020.igem.org/wiki/images/8/88/T--NEFU_China--LabDi.png" alt="" class="sponserImg">
+  <a href=""><img src="https://2020.igem.org/wiki/images/3/3f/T--NEFU_China--QQ.png" alt="" class="QQ" title="3289085240"></a>
+  <a href=""><img src="https://2020.igem.org/wiki/images/7/79/T--NEFU_China--Email.png" alt="" class="Emial" title="igem_nefu2020@163.com"></a>
+  <a href=""><img src="https://2020.igem.org/wiki/images/7/7e/T--NEFU_China--WeChat.png" alt="" class="WeChat" title="NEFU-iGEM"></a>
+  <a href=""><img src="https://2020.igem.org/wiki/images/7/79/T--NEFU_China--Email.png" alt="" class="Phone" title="18846936736"></a>
+  <a href="https://m.facebook.com/china.nefu.5"><img src="https://2020.igem.org/wiki/images/4/40/T--NEFU_China--F.png" alt="" class="F"></a>
+  <a href="https://mobile.twitter.com/account"><img src="https://2020.igem.org/wiki/images/8/83/T--NEFU_China--Bird.png" alt="" class="Bird"></a>
+</div>
+</body>
+</html>
